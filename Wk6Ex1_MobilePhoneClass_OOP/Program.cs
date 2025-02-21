@@ -42,7 +42,7 @@ namespace Wk6Ex1_MobilePhoneClass_OOP
     }
 
 
-    // Student Class
+    // Mobile Phone Class
 
     class MobilePhone
     {
