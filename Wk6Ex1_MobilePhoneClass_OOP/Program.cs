@@ -11,63 +11,67 @@ namespace Wk6Ex1_MobilePhoneClass_OOP
     {
         static void Main(string[] args)
         {
-            // Goal: Create a class to hold studnet information.
+            // Goal: Create a class to hold mobile phone information
             // Include a constructor to initialize the properties.
-            // Have a module within the class to display their information.
-            // Create three students(objects of the student class) and display their information.
+            // Have a method within the class to display their information.
+            // Create two phones(objects of the phone class) and display their information.
 
-            // Initialize the first student. Name him Jonothan, give him the id 123123, set his age to 20, and name his course about children and grandmas scripting
-            Student student1 = new Student("Jonothan", 123123, 20, "Web Design for Babies and Old People");
-            // Initialize the second student. Name her Maria, give her the id 456456, set her age to 45, and name her course about robots sewing
-            Student student2 = new Student("Maria", 456456, 45, "Teach Your Robot to Sew Socks");
-            // Initialize the third student. Name them Ambigous Ghost, give them the id 789789, set their age to 105, and name their course about something very normal and not suspicious or legally concerning at all.
-            Student student3 = new Student("Ambiguous Ghost", 789789, 105, "NDAs About Radioative Water and How Long They Last");
+            // Initialize the first phone. Set the brand to Samsung, set the model to Galaxy S25, set the storage capacity to 256 GB, and set the price to 860.3
+            MobilePhone mobilePhone1 = new MobilePhone("Samsung", "Galaxy S25", "256 GB", 860.3);
 
-            // display the info for student 1
-            student1.DisplayStudentInfo();
+            // Initialize the second phone. Set the brand to Samsung, set the model to Galaxy S25+, set the storage capacity to 512 GB, and set the price to 990.99
+            MobilePhone mobilePhone2 = new MobilePhone("Samsung", "Galaxy S25+", "512 GB", 990.99);
 
-            // display the info for student 2
-            student2.DisplayStudentInfo();
+            // Initialize the third phone. Set the brand to Samsung, set the model to Galaxy S25 Ultra, set the storage capacity to 1 TB, and set the price to 1300
+            MobilePhone mobilePhone3 = new MobilePhone("Samsung", "Galaxy S25 Ultra", "1 TB", 1300);
 
-            // display the info for student 3
-            student3.DisplayStudentInfo();
+
+            // display the details for phone 1
+            mobilePhone1.DisplayPhoneDetails();
+
+            // display the details for phone 2
+            mobilePhone2.DisplayPhoneDetails();
+
+            // display the details for phone 3
+            mobilePhone3.DisplayPhoneDetails();
+
         }
     }
 
 
     // Student Class
 
-    class Student
+    class MobilePhone
     {
         // Properties/Attributes/Field Names
-        public string Name;        // Declare an attribute of the class to hold a student's name
-        public int ID;          // Declare an attribute of the class to hold a student's ID
-        public int Age;          // Declare an attribute of the class to hold a student's ID
-        public string Course;          // Declare an attribute of the class to hold a student's ID
+        public string Brand;        // Declare an attribute of the class to hold a phone's brand
+        public string Model;          // Declare an attribute of the class to hold a phone's model
+        public string StorageCapacity;          // Declare an attribute of the class to hold a phone's storage capacity
+        public double Price;          // Declare an attribute of the class to hold a phone's price
 
 
         // Constructor
         // (Needs to have the same name as the class)
-        public Student(string aName, int aID, int aAge, string aCourse)
+        public MobilePhone(string aBrand, string aModel, string aStorageCapacity, double aPrice)
         {
-            Name = aName;       // set the Name of the student object in the student class to be the name we type
-            ID = aID;       // set the ID of the student object in the student class to be the ID we type
-            Age = aAge;     // set the Age of the student object in the student class to be the Age we type
-            Course = aCourse;       // set the course of the student object in the student class to be the course we type
+            Brand = aBrand;       // set the brand of the phone object in the mobile phone class to be the brand we type
+            Model = aModel;       // set the model of the phone object in the mobile phone class to be the model we type
+            StorageCapacity = aStorageCapacity;     // set the storage capacity of the phone object in the mobile phone class to be the storage capacity we type
+            Price = aPrice;       // set the price of the phone object in the mobile phone class to be the price we type
         }
 
 
         // Methods
 
         // Method to display all student information
-        public void DisplayStudentInfo()
+        public void DisplayPhoneDetails()
         {
-            // print student details
-            Console.WriteLine($"Student Information\n" +      // title
-                $"Name: {Name}\n" +     // output name of student
-                $"ID: {ID}\n" +     // output the student's ID number
-                $"Age: {Age}\n" +       // output the student's age
-                $"Course: {Course}\n");       // output the student's course. End with a line break for readability
+            // print the mobile phone's details
+            Console.WriteLine($"Phone Details\n" +      // title
+                $"Brand: {Brand}\n" +     // output brand of the phone
+                $"Model: {Model}\n" +     // output the phone's model/model number
+                $"Storage Capacity: {StorageCapacity}\n" +       // output the phone's storage capacity
+                $"Price: {Price:C2}\n");       // output the phone's price. End with a line break for readability
         }
     }
 
