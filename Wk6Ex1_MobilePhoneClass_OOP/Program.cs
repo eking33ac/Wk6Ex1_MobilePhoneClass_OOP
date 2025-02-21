@@ -16,6 +16,7 @@ namespace Wk6Ex1_MobilePhoneClass_OOP
             // Have a method within the class to display their information.
             // Create two phones(objects of the phone class) and display their information.
 
+            
             // Initialize the first phone. Set the brand to Samsung, set the model to Galaxy S25, set the storage capacity to 256 GB, and set the price to 860.3
             MobilePhone mobilePhone1 = new MobilePhone("Samsung", "Galaxy S25", "256 GB", 860.3);
 
@@ -77,7 +78,4 @@ namespace Wk6Ex1_MobilePhoneClass_OOP
                 $"Price: {Price:C2}\n");       // output the phone's price. End with a line break for readability
         }
     }
-
-
-
 }
